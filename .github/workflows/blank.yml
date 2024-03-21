@@ -1,0 +1,19 @@
+name: Master Branch Push Workflow
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      # Ajoutez ici les étapes de votre workflow, par exemple :
+      - name: Run tests
+        run: |
+          # Commandes pour exécuter vos tests
